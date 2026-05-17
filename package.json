@@ -2,6 +2,7 @@
   "name": "api-resources-share",
   "version": "1.0.0",
   "description": "",
+<<<<<<< HEAD
   "main": "server.ts",
   "scripts": {
     "dev": "cross-env NODE_ENV=development tsx watch src/server.ts",
@@ -12,6 +13,21 @@
     "test:watch": "cross-env NODE_ENV=test vitest",
     "db:studio": "NODE_OPTIONS='--dns-result-order=ipv4first' drizzle-kit studio",
     "db:migrate": "NODE_OPTIONS='--dns-result-order=ipv4first' drizzle-kit migrate",
+=======
+  "main": "dist/src/server.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "cross-env NODE_ENV=production node dist/src/server.js",
+    "prod:check": "npm run typecheck && npm test && npm run build",
+    "typecheck": "tsc --noEmit",
+    "test": "cross-env NODE_ENV=test vitest run",
+    "test:watch": "cross-env NODE_ENV=test vitest",
+    "db:generate": "drizzle-kit generate",
+    "db:studio": "NODE_OPTIONS='--dns-result-order=ipv4first' drizzle-kit studio",
+    "db:migrate": "node scripts/migrate.mjs",
+    "db:migrate:drizzle": "NODE_OPTIONS='--dns-result-order=ipv4first' drizzle-kit migrate",
+>>>>>>> 884a15f (fix production bugs)
     "db:push": "drizzle-kit push"
   },
   "keywords": [],

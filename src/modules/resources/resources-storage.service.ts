@@ -1,5 +1,9 @@
 import crypto from "node:crypto";
 
+<<<<<<< HEAD
+=======
+import { env } from "../../../env.js";
+>>>>>>> 884a15f (fix production bugs)
 import { AppError } from "../../error/app-error.js";
 import { getSupabaseClient } from "../../shared/storage/supabase.js";
 
@@ -152,6 +156,7 @@ export const resourceStorageService = {
 };
 
 function getResourcesBucket() {
+<<<<<<< HEAD
   const bucket = process.env.SUPABASE_BUCKET_RESOURCES;
 
   if (!bucket) {
@@ -159,4 +164,7 @@ function getResourcesBucket() {
   }
 
   return bucket;
+=======
+  return env.SUPABASE_BUCKET_RESOURCES;
+>>>>>>> 884a15f (fix production bugs)
 }
