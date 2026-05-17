@@ -1,7 +1,7 @@
 import crypto from "node:crypto";
 import jwt, { type JwtPayload, type SignOptions } from "jsonwebtoken";
 
-import { env } from "../../env.js";
+import { env } from "../env.js";
 import type { User } from "../db/schema.js";
 import { AppError } from "../error/app-error.js";
 

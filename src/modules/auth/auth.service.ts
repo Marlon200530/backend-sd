@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
 
-import { env } from "../../../env.js";
+import { env } from "../../env.js";
 import { AppError } from "../../error/app-error.js";
 import type { User } from "../../db/schema.js";
 import {

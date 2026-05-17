@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
 
-import { env } from "../../../env.js";
+import { env } from "../../env.js";
 import { AppError } from "../../error/app-error.js";
 import { toPublicUser } from "../../utils/public-user.js";
 import { resourceStorageService } from "../resources/resources-storage.service.js";

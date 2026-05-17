@@ -1,7 +1,7 @@
 import type { ErrorRequestHandler, RequestHandler } from "express";
 import { ZodError } from "zod";
 
-import { isProd } from "../../env.js";
+import { isProd } from "../env.js";
 import { AppError } from "../error/app-error.js";
 import { isJwtTokenExpiredError, isJwtTokenInvalidError } from "../jwt/jwt-errors.js";
 
